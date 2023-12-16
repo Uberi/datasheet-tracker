@@ -7,21 +7,22 @@ There are other projects that try to do the same thing (e.g., [digikey library](
 
 Features:
 
-* Fully resumable - if you interrupt and restart any of the scrapers, they'll keep going from where they left off.
+* **Fully resumable** - if you interrupt and restart any of the scrapers, they'll keep going from where they left off.
     * You can also re-run it, and it'll only scrape items that it hasn't previously scraped.
-* Anti-bot protection bypass - uses [ScrapingBee](https://www.scrapingbee.com/)'s residential proxies and headless browsers to skip CAPTCHA pages.
+* **Anti-bot protection bypass** - uses [ScrapingBee](https://www.scrapingbee.com/)'s residential proxies and headless browsers to skip CAPTCHA pages.
     * As of 2023, the free trial plan was enough for a few hundred datasheets.
     * I'd prefer not to rely on a third-party service here, but even if I integrated local headless browsing, it would still rely on a third-party residential proxy provider. For now, the scripts are short enough that I'd just rewrite them when ScrapingBee raises prices or goes out of business.
-* No API access needed, just screen scraping - no waiting for approval or permission.
+* **No API access needed, just screen scraping** - no waiting for approval or permission.
     * The API application process for all major distributors is far too slow and annoying, taking multiple days and human review.
 * Also grabs an HTML mirror of the product page (including pricing and logistics info).
-* About 100 lines per scraper - if you want more features it'll be really easy to add them yourself.
+* About 100 lines of code per scraper - if you want more features it'll be really easy to add them yourself.
 
-Why?
+Rationale
+---------
 
 * Open hardware distributions should include everything you could reasonably need to continue developing the project, even if its dependencies have disappeared from the internet. That includes datasheets, source code for every included library, mirrors of key support pages, etc.
 * Datasheets go offline, especially for more niche components. Manufacturers go out of business, websites disappear, and the Internet Archive doesn't capture everything. What if you come back to a project after a decade and critical info is missing?
-* Previously, I was downloading and organizing datasheets by hand. This was tedious and time-consuming, and the effort was wasted if I decided against using the corresponding component later.
+* Previously, I was downloading and organizing datasheets by hand. This was tedious and time-consuming, and the effort was wasted if I decided against using the corresponding component later. Now I just run these scripts once a month.
 
 Usage
 -----
