@@ -1,0 +1,5 @@
+mouser_datasheets/
+digikey_datasheets/
+DK_PRODUCTS.csv
+Mouser*.xls
+scrape-all.sh
